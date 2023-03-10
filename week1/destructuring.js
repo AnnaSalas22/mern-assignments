@@ -5,3 +5,4 @@ const [ ,otherRandomCar ] = cars
 console.log(randomCar)
 console.log(otherRandomCar)
 
+console.log/
