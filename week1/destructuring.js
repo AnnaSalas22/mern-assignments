@@ -1,7 +1,7 @@
 //Problem1
-const cars = ['Tesla', 'Mercedes', 'Honda'];
-const [ randomCar ] = cars
-const [ ,otherRandomCar ] = cars
+let cars = ['Tesla', 'Mercedes', 'Honda'];
+let [ randomCar ] = cars
+let [ ,otherRandomCar ] = cars
 //Predict the output
 console.log(randomCar)
 console.log(otherRandomCar)
@@ -40,10 +40,10 @@ console.log(hashedPassword);
 //==> undefined
 
 //Problem4
-const numbers = [8, 2, 3, 5, 6, 1, 67, 12, 2];
-const [,first] = numbers;
-const [,,,second] = numbers;
-const [,,,,,,,,third] = numbers;
+let numbers = [8, 2, 3, 5, 6, 1, 67, 12, 2];
+let [,first] = numbers;
+let [,,,second] = numbers;
+let [,,,,,,,,third] = numbers;
 //Predict the output
 console.log(first == second);
 console.log(first == third);  
@@ -53,13 +53,13 @@ console.log(first == third);
 
 
 //Problem5
-const lastTest = {
+let lastTest = {
     key: 'value',
     secondKey: [1, 5, 1, 8, 3, 3]
 }
-const { key } = lastTest;
-const { secondKey } = lastTest;
-const [ ,willThisWork] = secondKey;
+let { key } = lastTest;
+let{ secondKey } = lastTest;
+let [ ,willThisWork] = secondKey;
 //Predict the output
 console.log(key);
 console.log(secondKey);
