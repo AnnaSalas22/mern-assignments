@@ -1,7 +1,8 @@
 import React from 'react';
 
 const PersonCard = (props) => {
-    return (
+    console.log(props);
+        return (
         <div>
             <h1> {props.familyName}, {props.firstName}</h1>
             <p>Age: {props.age}<br/>
