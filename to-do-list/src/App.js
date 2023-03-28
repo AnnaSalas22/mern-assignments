@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from "react";
 import './App.css';
 
 const App = (props) => {
@@ -14,8 +14,8 @@ const App = (props) => {
 
       const toDoItem = {
         text: newToDo,
-        complete: false
-      };
+        complete: false 
+      }
 
       setToDos([...toDos,  toDoItem]);
       setNewToDo("");
@@ -25,7 +25,7 @@ const App = (props) => {
     const filteredToDos = toDos.filter((toDos, i) => {
       return i !==  delIdx;
     });
-
+  
     setToDos(filteredToDos);
   };
 
@@ -34,47 +34,44 @@ const App = (props) => {
       if (idx == i) {
         toDos.complete = !toDos.complete;
       }
-
       return toDos;
     });
+
+    setToDos(updatedToDos);
   }
-  
-  return (
-      <div>
-          <form onSubmit={(event) => {
-             handleNewToDoSubmit(event);
-          }}>
-              <input className="box1" onChange={(event) => {
-                  setNewToDo(event.target.value);
-              }} 
-              type="text"
-              value={newToDo}
-              />
-              <div className="style">
-                <button>Add</button>
-              </div>
-          </form>
+
+  <div>
+      <form 
+        onSubmit={(event) => {
+        handleNewToDoSubmit(event);
+        }}>
+        <input className="box1" onChange={(event) => {
+          setNewToDo(event.target.value);
+        }}
+          type="text"
+          value={newToDo}/>
+          <div className="style">
+            <button>Add</button>
+          </div>
+      </form>
 
           
-            {toDos.map((toDo, i) => {
+            {toDos.map((toDos, i) => {
               return (
               <div key={i}>
-
-                <span>{toDo.text}</span>
-
-                <input className="box" onChange={(event) => {
+                <span>{toDos.text}</span>
+                  <input className="box" onChange={(event)=> {
                   handleToggleComplete(i);
-                  
-                }} checked = {toDos.complete} type="checkbox"/>
+                  }} 
+                  checked={toDos.complete} type="checkbox"/>
 
-                <button className="delete" onClick={(event) => {
-                  handleToDoDelete(i);
-                }}>Delete</button>
+                  <button className="delete" onClick={(event) => {
+                    handleToDoDelete(i);
+                }}> Delete</button>
               </div>
-              );
-            })}
-      </div>
-  );
+            );
+        })}
+    </div>
 }
 
 export default App;
