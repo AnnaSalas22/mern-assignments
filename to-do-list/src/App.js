@@ -17,7 +17,7 @@ const App = (props) => {
         complete: false 
       }
 
-      setToDos([...toDos,  toDoItem]);
+      setToDos([...toDos, newToDo]);
       setNewToDo("");
   };
 
@@ -59,7 +59,7 @@ const App = (props) => {
             {toDos.map((toDos, i) => {
               return (
               <div key={i}>
-                <span>{toDos.text}</span>
+                <span>{toDos}</span>
                   <input className="box" onChange={(event)=> {
                   handleToggleComplete(i);
                   }} 
@@ -71,6 +71,6 @@ const App = (props) => {
             );
         })}
     </div>
-};
+}
 
 export default App;
