@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './App.css';
+import "./App.css";
 
 const App = (props) => {
   const [newToDo, setNewToDo] = useState("");
@@ -63,8 +63,7 @@ const App = (props) => {
                   <input className="box" onChange={(event)=> {
                   handleToggleComplete(i);
                   }} 
-                  checked={toDos.complete} type="checkbox"/>
-
+                  checked={toDos.complete} type="checkbox"/> 
                   <button className="delete" onClick={(event) => {
                     handleToDoDelete(i);
                 }}> Delete</button>
@@ -72,6 +71,6 @@ const App = (props) => {
             );
         })}
     </div>
-}
+};
 
 export default App;
