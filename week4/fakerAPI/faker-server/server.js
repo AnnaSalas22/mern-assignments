@@ -62,7 +62,6 @@ return {
 app.get('/api/user/company', (req, res) => {
     const newUserAndCompany = createUserAndCompany();
     res.json (newUserAndCompany);
-    
 });
 
 app.listen( port, () => console.log(`Listening on port: ${port}`) );
