@@ -19,6 +19,7 @@ const createUser= () => {
     }
 }
 
+
 app.get('/api/user/new', (req,res) => {
     const newUser = createUser();
     res.json(newUser)
