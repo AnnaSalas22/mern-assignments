@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+}
+
+h2{
+  font-size: xx-large;
+  margin: 30px 0px;
+}
+
+.onTheForm {
+  color:rgb(80, 78, 78);
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  margin: auto;
+  padding:15px;
+  background-color: rgb(179, 170, 170);
+}
+
+.formLabel {
+  color:black;
+  font-size: large;
+  
+}
+
+.CreateB{
+  margin-top: 10px;
+  padding: 5px;
+  width: 100px;
+}
+
+
+
+
+
+.submit-input{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+}
